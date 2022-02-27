@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Project') {
+            steps {
+                echo 'This is Pipeline Project'
+            }
+        }
+        stage('Git Project') {
+            steps {
+                git 'https://github.com/vinothvenky/vino.git'
+            }
+        }
+    }
+}
